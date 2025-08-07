@@ -17,8 +17,8 @@ jobs:
           node-version: '20' # or use your project's Node version
 
       - name: Install dependencies
-         run: npm install --legacy-peer-deps --force || true
-
+        run: npm install
+         
       - name: Count total installed NPM packages
         run: |
           COUNT=$(npm ls --all --parseable --long 2>/dev/null | grep node_modules | wc -l)
