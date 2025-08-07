@@ -380,7 +380,6 @@
     "fs": "*",
     "fs-extra": "*",
     "fs-promise": "*",
-    "fsevents": "*",
     "fstream": "*",
     "fuse.js": "*",
     "fuzzy": "*",
