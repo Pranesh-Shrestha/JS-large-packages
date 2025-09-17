@@ -15,7 +15,7 @@ jobs:
         uses: invisirisk/pse-action@dev-test
         with:
           api_url: "https://app.stage.invisirisk.com"
-          app_token: ${{ secrets.IR_API_KEY_LARGE_STAGE }}
+          app_token: ${{ secrets.IR_API_KEY_STAGE_NPM }}
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -47,6 +47,6 @@ jobs:
      uses: invisirisk/pse-action@dev-test
      with:
       api_url: "https://app.stage.invisirisk.com"
-      app_token: ${{ secrets.IR_API_KEY_LARGE_STAGE }}
+      app_token: ${{ secrets.IR_API_KEY_STAGE_NPM }}
       send_job_status: "true"
       debug: "true"
