@@ -17,7 +17,7 @@
     "ansi-regex": "6.2.2",
     "wrap-ansi": "9.0.2",
     "color-convert": "3.1.2",
-    "color-name": "2.0.1",
+    "color-name": "2.0.2",
     "is-arrayish": "0.3.4",
     "slice-ansi": "7.1.2",
     "color": "5.0.2",
