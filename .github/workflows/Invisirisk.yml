@@ -3,6 +3,11 @@ name: Install NPM Packages
 on:
   workflow_dispatch:
 
+permissions:
+  checks: write
+  contents: write
+  packages: read
+
 jobs:
   install-deps:
     runs-on: ubuntu-latest
