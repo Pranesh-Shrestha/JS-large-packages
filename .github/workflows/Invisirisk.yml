@@ -17,11 +17,11 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@dev-test
         with:
           api_url: "https://app.stage.invisirisk.com"
           app_token: ${{ secrets.IR_API_KEY_STAGE }}
-        #  mode: "docker-intercept"
+          mode: "docker-intercept"
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -106,7 +106,7 @@ jobs:
 
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@dev-test
         with:
           cleanup: "true"
           
@@ -118,7 +118,7 @@ jobs:
    if: always()
    steps:
    - name: Gather Status
-     uses: invisirisk/pse-action@latest
+     uses: invisirisk/pse-action@dev-test
      with:
       api_url: "https://app.stage.invisirisk.com"
       app_token: ${{ secrets.IR_API_KEY_STAGE }}
