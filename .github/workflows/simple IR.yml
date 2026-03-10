@@ -1,4 +1,4 @@
-name: Node CI
+name: simple IR JS run
 
 on:
   workflow_dispatch:
