@@ -1,4 +1,4 @@
-name: simple IR JS run
+name: simple IR JS run x Dependency Tree
 
 on:
   workflow_dispatch:
